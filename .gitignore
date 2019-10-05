@@ -33,3 +33,7 @@ Assets/StreamingAssets/
 #Saves
 Assets/Resources/Saves/
 Temp/
+Builds/
+ProjectSettings/GraphicsSettings.asset
+ProjectSettings/TagManager.asset
+ProjectSettings/UnityConnectSettings.asset

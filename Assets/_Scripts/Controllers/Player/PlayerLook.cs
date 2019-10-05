@@ -34,8 +34,11 @@ public class PlayerLook : MonoBehaviour
             CameraRotation();
     }
 
-    private void LockCursor(){
-        Cursor.lockState = CursorLockMode.Locked;
+    public void LockCursor(){
+        if(isControl){
+            Cursor.lockState = CursorLockMode.Locked;
+            Debug.Log("Beep");
+        }
     }
 
     private void CameraRotation(){
