@@ -80,6 +80,26 @@ MonoBehaviour:
   - Name: 
     Value: 1930
   Exists: 0
+--- !u!114 &-4207325342546664528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/LD45/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637058356563718387
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 778
+  Exists: 1
 --- !u!114 &-4173275594791664468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +120,26 @@ MonoBehaviour:
   - Name: 
     Value: 778
   Exists: 0
+--- !u!114 &-2091651629271103414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/LD45/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637058356563708390
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1930
+  Exists: 1
 --- !u!114 &-1905015761031103349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +160,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 470
   Exists: 1
+--- !u!114 &-514959698506111451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.assets.bank
+  m_EditorClassIdentifier: 
+  Path: D:/LD45/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.assets.bank
+  SubDir: 
+  lastModified: 637058356563708390
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 470
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,17 +193,17 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -7476047310388156263}
-  - {fileID: -1905015761031103349}
-  - {fileID: -7087071023531328663}
+  - {fileID: -4207325342546664528}
+  - {fileID: -514959698506111451}
+  - {fileID: -2091651629271103414}
   EditorEvents:
   - {fileID: 7481274576917735233}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7087071023531328663}
+  - {fileID: -2091651629271103414}
   StringsBanks:
-  - {fileID: -7476047310388156263}
-  stringsBankWriteTime: 637058162477539529
+  - {fileID: -4207325342546664528}
+  stringsBankWriteTime: 637058356563718387
   cacheVersion: 3
 --- !u!114 &1945761293769380014
 MonoBehaviour:
@@ -220,7 +280,7 @@ MonoBehaviour:
   Path: event:/Test
   guid: 42af3a2dc7d7c64083135b0b2e6ea468
   Banks:
-  - {fileID: -7087071023531328663}
+  - {fileID: -2091651629271103414}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
