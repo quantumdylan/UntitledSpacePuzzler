@@ -27,6 +27,7 @@ public class PlayerInteract : MonoBehaviour
     }
 
     // Update is called once per frame
+    // TODO: Make an actual pause screen function, and make sure to take away the ability to look when the game is paused/mouse loses focus
     void Update()
     {
         if(Input.GetKey(KeyCode.F)){

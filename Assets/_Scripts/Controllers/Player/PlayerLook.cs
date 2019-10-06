@@ -83,8 +83,8 @@ public class PlayerLook : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
 
-        while(((Vector3.Distance(transform.position, target.transform.position) > 0.01) || 
-                Quaternion.Angle(transform.rotation, Quaternion.LookRotation(look.transform.position - transform.position)) > 0.1) && 
+        while(((Vector3.Distance(transform.position, target.transform.position) > 0.001) || 
+                Quaternion.Angle(transform.rotation, Quaternion.LookRotation(look.transform.position - transform.position)) > 0.01) && 
                 !isControl && movingIn){
             transform.position = Vector3.Lerp(transform.position, target.transform.position, Time.deltaTime * kioskZoom);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(look.transform.position - transform.position), Time.deltaTime * kioskZoom);
@@ -92,9 +92,17 @@ public class PlayerLook : MonoBehaviour
             yield return null;
         }
 
+        Debug.Log("Before set:");
+        Debug.Log("Camera position: " + transform.position + ", Target position: " + target.transform.position);
+        Debug.Log("Camera rotation: " + transform.rotation + ", Target rotation: " + target.transform.rotation);
+
         transform.position = target.transform.position;
-        transform.rotation = target.transform.rotation;
+        transform.rotation.SetLookRotation(look.transform.position);
         player.GetComponent<PlayerMove>().giveControl();
+
+        Debug.Log("After set:");
+        Debug.Log("Camera position: " + transform.position + ", Target position: " + target.transform.position);
+        Debug.Log("Camera rotation: " + transform.rotation + ", Target rotation: " + target.transform.rotation);
     }
 
     private IEnumerator cameraOut(){

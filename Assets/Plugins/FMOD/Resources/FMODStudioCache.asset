@@ -60,6 +60,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1930
   Exists: 1
+--- !u!114 &-5322952036784595275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TestBG
+  m_EditorClassIdentifier: 
+  Path: event:/TestBG
+  guid: 42af3a2dc7d7c64083135b0b2e6ea468
+  Banks:
+  - {fileID: -3773610820972936461}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 360000
 --- !u!114 &-4540789688367227987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +143,26 @@ MonoBehaviour:
   - Name: 
     Value: 778
   Exists: 0
+--- !u!114 &-3773610820972936461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: F:/Unity/Projects/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637059270965944973
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 6904
+  Exists: 1
 --- !u!114 &-2091651629271103414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,18 +236,40 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -4207325342546664528}
-  - {fileID: -514959698506111451}
-  - {fileID: -2091651629271103414}
+  - {fileID: 197500949826520849}
+  - {fileID: 5711362121854143323}
+  - {fileID: -3773610820972936461}
   EditorEvents:
-  - {fileID: 7481274576917735233}
+  - {fileID: -5322952036784595275}
+  - {fileID: 5507520893101267395}
+  - {fileID: 4659822287325781171}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2091651629271103414}
+  - {fileID: -3773610820972936461}
   StringsBanks:
-  - {fileID: -4207325342546664528}
-  stringsBankWriteTime: 637058356563718387
+  - {fileID: 197500949826520849}
+  stringsBankWriteTime: 637059270966655622
   cacheVersion: 3
+--- !u!114 &197500949826520849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: F:/Unity/Projects/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637059270966655622
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 930
+  Exists: 1
 --- !u!114 &1945761293769380014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +309,72 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 470
+  Exists: 1
+--- !u!114 &4659822287325781171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DoorOpen
+  m_EditorClassIdentifier: 
+  Path: event:/DoorOpen
+  guid: f03b9506d8a6bb4caae8df30bed15f4b
+  Banks:
+  - {fileID: -3773610820972936461}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 200
+  Length: 3777
+--- !u!114 &5507520893101267395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DoorClosed
+  m_EditorClassIdentifier: 
+  Path: event:/DoorClosed
+  guid: c8dac8eef51cf043bdfefc4037943df3
+  Banks:
+  - {fileID: -3773610820972936461}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2533
+--- !u!114 &5711362121854143323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.assets.bank
+  m_EditorClassIdentifier: 
+  Path: F:/Unity/Projects/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.assets.bank
+  SubDir: 
+  lastModified: 637059270966615586
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 9949504
   Exists: 1
 --- !u!114 &6366527836955582990
 MonoBehaviour:
