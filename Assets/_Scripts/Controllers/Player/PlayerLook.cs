@@ -105,6 +105,7 @@ public class PlayerLook : MonoBehaviour
 
         while(Vector3.Distance(transform.position, playerBody.transform.position + offset) > 0.01 && !movingIn){
             transform.position = Vector3.Lerp(transform.position, playerBody.transform.position + offset, Time.deltaTime * kioskZoom);
+            transform.rotation = playerBody.transform.rotation;
 
             yield return null;
         }
