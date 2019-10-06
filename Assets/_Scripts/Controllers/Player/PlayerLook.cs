@@ -37,7 +37,6 @@ public class PlayerLook : MonoBehaviour
     public void LockCursor(){
         if(isControl){
             Cursor.lockState = CursorLockMode.Locked;
-            Debug.Log("Beep");
         }
     }
 

@@ -6,21 +6,34 @@ public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject cam;
+    [SerializeField] private GameObject flashlight;
+    [SerializeField] private float lightBrightness = 1;
     [SerializeField] private float timeOut = 100.0f;
-    private bool countDown = false;
-    private float time = 0;
+    
+    private bool menuCoolDown = false;
+    private bool lightCoolDown = false;
+    private bool lightOn = false;
+    private float menuTime = 0;
+    private float lightTime = 0;
     
     // Start is called before the first frame update
     void Awake()
     {
         pauseMenu = GameObject.FindGameObjectWithTag("Pause");
         cam = GameObject.FindGameObjectWithTag("MainCamera");
+        flashlight = GameObject.FindGameObjectWithTag("Flashlight");
+
+        flashlight.GetComponent<Light>().intensity = (lightOn) ? lightBrightness : 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape) && !countDown){
+        if(Input.GetKey(KeyCode.F)){
+            
+        }
+
+        if(Input.GetKey(KeyCode.Escape) && !menuCoolDown){
             pauseMenu.GetComponent<Canvas>().enabled = !pauseMenu.GetComponent<Canvas>().enabled; // toggle state
             
             if(!pauseMenu.GetComponent<Canvas>().enabled){
@@ -30,15 +43,30 @@ public class PlayerInteract : MonoBehaviour
                 Cursor.visible = true;
             }
 
-            countDown = true;
+            menuCoolDown = true;
+        }
+        if(Input.GetKey(KeyCode.F) && !lightCoolDown){
+            lightOn = !lightOn; // toggle state
+
+            flashlight.GetComponent<Light>().intensity = (lightOn) ? lightBrightness : 0; // assign intensity
+
+            lightCoolDown = true;
         }
 
-        if(countDown){
-            if(time < timeOut)
-                time += Time.deltaTime;
+        if(menuCoolDown){
+            if(menuTime < timeOut)
+                menuTime += Time.deltaTime;
             else{
-                countDown = false;
-                time = 0;
+                menuCoolDown = false;
+                menuTime = 0;
+            }
+        }
+        if(lightCoolDown){
+            if(lightTime < timeOut)
+                lightTime += Time.deltaTime;
+            else{
+                lightCoolDown = false;
+                lightTime = 0;
             }
         }
     }
