@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{e7925cdd-972d-41e1-820c-71dc4c788394}">
+		<property name="assetPath">
+			<value>BG/spooky ambience.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>832.07836734693876</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a8013588-23cf-4f4e-8a87-701a8be7e52b}</destination>
+		</relationship>
+	</object>
+</objects>
