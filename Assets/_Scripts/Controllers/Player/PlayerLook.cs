@@ -18,6 +18,7 @@ public class PlayerLook : MonoBehaviour
 
     private bool isControl = true;
     private bool movingIn = false;
+    private bool inScreen = false;
     public Transform idle;
 
     private void Awake(){
@@ -78,6 +79,15 @@ public class PlayerLook : MonoBehaviour
         StartCoroutine(cameraOut());
     }
 
+    public void takeControl(){
+        isControl = false;
+    }
+
+    public void giveControl(){
+        if(!inScreen)
+            isControl = true;
+    }
+
     private IEnumerator cameraIn(Transform target, Transform look){
         player.GetComponent<PlayerMove>().takeControl();
 
@@ -92,17 +102,11 @@ public class PlayerLook : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("Before set:");
-        Debug.Log("Camera position: " + transform.position + ", Target position: " + target.transform.position);
-        Debug.Log("Camera rotation: " + transform.rotation + ", Target rotation: " + target.transform.rotation);
-
         transform.position = target.transform.position;
         transform.rotation.SetLookRotation(look.transform.position);
         player.GetComponent<PlayerMove>().giveControl();
 
-        Debug.Log("After set:");
-        Debug.Log("Camera position: " + transform.position + ", Target position: " + target.transform.position);
-        Debug.Log("Camera rotation: " + transform.rotation + ", Target rotation: " + target.transform.rotation);
+        inScreen = true;
     }
 
     private IEnumerator cameraOut(){
@@ -121,5 +125,6 @@ public class PlayerLook : MonoBehaviour
         isControl = true;
         transform.position = playerBody.transform.position + offset;
         player.GetComponent<PlayerMove>().giveControl();
+        inScreen = false;
     }
 }

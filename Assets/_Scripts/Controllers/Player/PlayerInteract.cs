@@ -39,9 +39,11 @@ public class PlayerInteract : MonoBehaviour
             
             if(!pauseMenu.GetComponent<Canvas>().enabled){
                 cam.GetComponent<PlayerLook>().LockCursor();
+                cam.GetComponent<PlayerLook>().giveControl();
             }
             else{
                 Cursor.visible = true;
+                cam.GetComponent<PlayerLook>().takeControl();
             }
 
             menuCoolDown = true;

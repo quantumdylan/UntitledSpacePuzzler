@@ -157,11 +157,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: F:/Unity/Projects/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.bank
   SubDir: 
-  lastModified: 637059968502434642
+  lastModified: 637060017249751173
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 7072
+    Value: 7586
   Exists: 1
 --- !u!114 &-2091651629271103414
 MonoBehaviour:
@@ -248,7 +248,7 @@ MonoBehaviour:
   - {fileID: -3773610820972936461}
   StringsBanks:
   - {fileID: 197500949826520849}
-  stringsBankWriteTime: 637059968504426447
+  stringsBankWriteTime: 637060017250471821
   cacheVersion: 3
 --- !u!114 &197500949826520849
 MonoBehaviour:
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: F:/Unity/Projects/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637059968504426447
+  lastModified: 637060017250471821
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -332,7 +332,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 200
-  Length: 2750
+  Length: 3250
 --- !u!114 &5507520893101267395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: F:/Unity/Projects/UntitledSpacePuzzler/Assets/Resources/FMOD/Desktop/Master.assets.bank
   SubDir: 
-  lastModified: 637059968504386411
+  lastModified: 637060017250431794
   LoadResult: 0
   FileSizes:
   - Name: Desktop
